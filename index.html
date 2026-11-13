@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Do Milhão</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="jogo">
+
+        <header>
+            <h1>✨ QUIZ DO MILHÃO ✨</h1>
+<p class="subtitulo">Será que você chega ao milhão?</p>
+<p id="categoria">🎯 Categoria: Conhecimentos Gerais</p>
+        </header>
+
+        <section class="painel">
+
+            <div class="status">
+                <span id="numero-pergunta">Pergunta 1 de 5</span>
+                <span id="premio">Prêmio: R$ 0</span>
+            </div>
+
+            <div class="progresso">
+                <div id="barra-progresso"></div>
+            </div>
+
+            <h2 id="pergunta">Carregando pergunta...</h2>
+
+            <div id="alternativas" class="alternativas"></div>
+
+            <button id="ajuda" class="botao-ajuda">
+                Ajuda 50/50
+            </button>
+
+            <p id="mensagem" class="mensagem"></p>
+
+            <button id="proxima" class="botao-proxima" disabled>
+                Próxima Pergunta
+            </button>
+
+            <!-- Tela de decisão ao terminar a primeira fase -->
+            <div id="tela-decisao" style="display: none;">
+
+                <h2>🏆 Parabéns!</h2>
+
+                <p>Você concluiu a primeira fase!</p>
+
+                <p id="premio-final"></p>
+
+                <p>
+                    Deseja parar e garantir seu prêmio
+                    ou continuar para a próxima etapa?
+                </p>
+
+                <button id="parar-jogo" class="botao-proxima">
+                    Parar e garantir prêmio
+                </button>
+
+                <button id="continuar-jogo" class="botao-proxima">
+                    Continuar
+                </button>
+
+            </div>
+
+            <!-- Tela de confirmação antes da fase difícil -->
+            <div id="confirmacao-risco" style="display: none;">
+
+                <h2>⚠️ Atenção!</h2>
+
+                <p>
+                    Se você continuar e errar uma pergunta da próxima fase,
+                    perderá todo o prêmio acumulado.
+                </p>
+
+                <p>Tem certeza de que deseja continuar?</p>
+
+                <button id="confirmar-continuacao" class="botao-proxima">
+                    Sim, quero arriscar!
+                </button>
+
+                <button id="cancelar-continuacao" class="botao-proxima">
+                    Não, prefiro parar
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
